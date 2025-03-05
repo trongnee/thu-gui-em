@@ -1,0 +1,71 @@
+/* Định nghĩa font từ file */
+@font-face {
+  font-family: "Maria"; /* Tên font bạn đặt */
+  src: url("./fonts/maria.ttf") format("truetype");
+  font-weight: 400; /* Trọng lượng font */
+  font-style: normal; /* Kiểu font */
+}
+/* Định nghĩa font từ file */
+@font-face {
+  font-family: "Whitegone"; /* Tên font bạn đặt */
+  src: url("./fonts/whitegone.ttf") format("truetype");
+  font-weight: 400; /* Trọng lượng font */
+  font-style: normal; /* Kiểu font */
+}
+
+html {
+  font-size: 32px;
+}
+
+.postcard {
+  position: relative;
+  height: 400px;
+  padding: 8px;
+  background-color: #eee9e6;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  font-family: Whitegone, sans-serif;
+}
+
+.border-stripes {
+  width: 100%;
+  height: 100%;
+  background: repeating-linear-gradient(
+  45deg,          /* Góc của các đường chéo */
+  #b2d8e5 0,        /* Bắt đầu với màu xanh */
+  #b2d8e5 20px,      /* Màu xanh kéo dài 20px */
+  #eee9e6 20px,     /* Bắt đầu màu trắng ngay sau xanh */
+  #eee9e6 30px,     /* Màu trắng kéo dài 20px */
+  #e88670 30px,       /* Bắt đầu màu đỏ ngay sau trắng */
+  #e88670 50px,       /* Màu đỏ kéo dài 20px và lặp lại */
+  #eee9e6 50px,     /* Bắt đầu màu trắng ngay sau xanh */
+  #eee9e6 60px     /* Màu trắng kéo dài 20px */
+  );
+  z-index: 1;
+}
+
+.postcard-content {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  bottom: 25px;
+  left: 25px;
+  z-index: 2;
+  display: flex;
+  background-color: #eee9e6;
+  flex-direction: column;
+}
+
+.stamps {
+  position: absolute;
+  top: 10px;
+  right: -10px;
+  width: 388px;
+  height: 268px;
+  background-image: url('../imgs/stamp.png');
+  background-size: auto;
+  background-position: center; /* Căn giữa ảnh */
+  background-repeat: no-repeat; /* Không lặp lại ảnh */
+  z-index: 3;
+  transform: scale(0.6);
+}
