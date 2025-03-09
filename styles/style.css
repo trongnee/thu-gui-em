@@ -64,8 +64,38 @@ html {
   height: 268px;
   background-image: url('../imgs/stamp.png');
   background-size: auto;
-  background-position: center; /* Căn giữa ảnh */
-  background-repeat: no-repeat; /* Không lặp lại ảnh */
+  background-position: center;
+  /* Căn giữa ảnh */
+  background-repeat: no-repeat;
+  /* Không lặp lại ảnh */
   z-index: 3;
   transform: scale(0.6);
+}
+
+.line {
+  display: block;
+  transform: translateX(-100px);
+  /* Bắt đầu từ bên trái */
+  opacity: 0;
+  transition: transform 2s ease-out, opacity 1s ease-in;
+  letter-spacing: 3px;
+}
+
+#text-section {
+  margin: 0 20px;
+  opacity: 0;
+  /* Ẩn ban đầu */
+  transition: opacity 0.3s ease-out;
+  max-width: 600px;
+  /* Giới hạn chiều rộng để văn bản tự xuống dòng */
+}
+
+#text-section.visible {
+  opacity: 1;
+}
+
+#text-section.visible .line {
+  transform: translateX(0);
+  /* Về vị trí gốc */
+  opacity: 1;
 }
