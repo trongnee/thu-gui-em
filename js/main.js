@@ -27,7 +27,7 @@
         if (charIndex < texts[currentTextIndex].length) {
           typingElements[currentTextIndex].textContent += texts[currentTextIndex].charAt(charIndex);
           charIndex++;
-          setTimeout(type, 5);
+          setTimeout(type, 100);
         } else {
           charIndex = 0;
           currentTextIndex++;
