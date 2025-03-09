@@ -75,7 +75,6 @@ html {
 .line {
   display: block;
   transform: translateX(-100px);
-  /* Bắt đầu từ bên trái */
   opacity: 0;
   transition: transform 2s ease-out, opacity 1s ease-in;
   letter-spacing: 3px;
@@ -86,8 +85,7 @@ html {
   opacity: 0;
   /* Ẩn ban đầu */
   transition: opacity 0.3s ease-out;
-  max-width: 600px;
-  /* Giới hạn chiều rộng để văn bản tự xuống dòng */
+  font-size: 1.3rem;
 }
 
 #text-section.visible {
